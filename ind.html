@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat Page</title>
+    <link rel="stylesheet" href="ind.css">
+</head>
+<body>
+    <centre>
+
+        <div class="div" id="login-prompt">
+            <div class="div-2">
+                <img srcset="logo.png">
+            </div>
+            <div class="div-9"><b>Live Chat</b></div>
+            <div class="div-3">
+                <div class="div-4">Username</div>
+                
+                <!-- <div class="div-5">                 -->
+                    <input type="text" name="txtuser" style="width:500px;height: 60px;border-radius: 15px;" id="txtuser" placeholder="Name" required/><br><br>
+                <!-- </div> -->
+                <div class="div-6">     Group ID
+                    <input type="text" name="group-id" style="width:500px;height: 60px;border-radius: 15px;" id="group-id" placeholder="Group Id" required/><br><br>
+                </div>
+                <!-- <div class="div-7">Enter Your Group ID here</div> -->
+                <div class="div-8">
+                    <input style="color:rgb(0, 0, 0)" type="submit" value="Submit" onclick="createUser()">
+                </div>
+            </div>
+              <img id="lc" srcset="live_chatlo.png">
+        </div>
+    </centre>
+        <div id="chat-window">
+            <div class="div-2"><p>Hello...<span id="your-username">pending</span></p>
+                <p>Group ID: <span id="current-group-id">pending</span></p>
+            </div>
+            <a href="#" id="logout" onclick="logout()">Logout</a>
+           <div id="chatconsole" border:1px solid #ccc;>
+                <div id="messages" style="border:purple solid #ccc; padding:4px; margin:4px; min-height: 100px;"></div>
+                <input type="text" name="message" id="message" placeholder="Enter message" required/><br><br>
+                <div id="div-9"><input style="color:rgb(0, 0, 0)" type="image" src="send.png" value="Send" id="sendmessage" onclick="sendMessage()"></div>
+            </div>
+    
+    <script type="text/javascript" src="https://unpkg.com/@cometchat/chat-sdk-javascript@latest/CometChat.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
